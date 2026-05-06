@@ -1,0 +1,5 @@
+ORIGIN_SUB_URL="https://example.com/your/raw/subscription"
+REFRESH_TOKEN="change-me-to-a-long-random-token"
+CACHE_TTL_SECONDS="300"
+RATE_LIMIT_PER_MINUTE="120"
+REFRESH_RATE_LIMIT_PER_MINUTE="10"

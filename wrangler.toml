@@ -1,0 +1,22 @@
+"$schema" = "./node_modules/wrangler/config-schema.json"
+name = "subscription-rename"
+main = "src/index.js"
+compatibility_date = "2025-04-01"
+workers_dev = true
+
+# Cron triggers are evaluated in UTC. This runs once per day at 04:00 UTC.
+[triggers]
+crons = [ "0 4 * * *" ]
+
+[[kv_namespaces]]
+binding = "SUB_KV"
+id = "REPLACE_WITH_SUB_KV_NAMESPACE_ID"
+preview_id = "REPLACE_WITH_SUB_KV_PREVIEW_NAMESPACE_ID"
+
+[vars]
+CACHE_TTL_SECONDS = "300"
+RATE_LIMIT_PER_MINUTE = "120"
+REFRESH_RATE_LIMIT_PER_MINUTE = "10"
+
+[observability]
+enabled = true
